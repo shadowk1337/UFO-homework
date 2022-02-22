@@ -12,7 +12,7 @@ function main()
         InputDataFerr), 'Ge', calcParameters(Data, InputDataSemi.Ge, ...
         InputDataFerr), 'GaAs', calcParameters(Data, ...
         InputDataSemi.GaAs, InputDataFerr), 'InSb', calcParameters(Data, ...
-        InputDataSemi.GaAs, InputDataFerr));
+        InputDataSemi.InSb, InputDataFerr));
 
     fprintf("Параметр\t\t|Si\t\t|Ge\t\t|GaAs\t\t|InSb\n");
     fprintf("Al\t\t|%g\t\t|%g\t\t|%g\t\t|%g\n", CalcData.Si.Al, ...
@@ -60,55 +60,55 @@ function makePlot(DataFerr, CalcData)
     title("Точечный график");
 
     plot(DataFerr.Al, CalcData.Si.Al, '.');
-    text(DataFerr.Al + 0.01, CalcData.Si.Al + 0.01, "Si(Al)");
+    text(DataFerr.Al, CalcData.Si.Al, "Si(Al)");
     hold on
     plot(DataFerr.Cu, CalcData.Si.Cu, '.');
-    text(DataFerr.Cu + 0.01, CalcData.Si.Cu - 0.01, "Si(Cu)");
+    text(DataFerr.Cu, CalcData.Si.Cu, "Si(Cu)");
     hold on
     plot(DataFerr.Au, CalcData.Si.Au, '.');
-    text(DataFerr.Au - 0.01, CalcData.Si.Au + 0.01, "Si(Au)");
+    text(DataFerr.Au, CalcData.Si.Au, "Si(Au)");
     hold on
     plot(DataFerr.Pt, CalcData.Si.Pt, '.');
-    text(DataFerr.Pt - 0.01, CalcData.Si.Pt - 0.01, "Si(Pt)");
+    text(DataFerr.Pt, CalcData.Si.Pt, "Si(Pt)");
     hold on
     
     plot(DataFerr.Al, CalcData.Ge.Al, '.');
-    text(DataFerr.Al - 0.01, CalcData.Ge.Al - 0.01, "Ge(Al)");
+    text(DataFerr.Al, CalcData.Ge.Al, "Ge(Al)");
     hold on
     plot(DataFerr.Cu, CalcData.Ge.Cu, '.');
-    text(DataFerr.Cu + 0.01, CalcData.Ge.Cu + 0.01, "Ge(Cu)");
+    text(DataFerr.Cu, CalcData.Ge.Cu, "Ge(Cu)");
     hold on
     plot(DataFerr.Au, CalcData.Ge.Au , '.');
-    text(DataFerr.Au + 0.01, CalcData.Ge.Au - 0.01, "Ge(Au)");
+    text(DataFerr.Au, CalcData.Ge.Au, "Ge(Au)");
     hold on
     plot(DataFerr.Pt, CalcData.Ge.Pt, '.');
-    text(DataFerr.Pt - 0.01, CalcData.Ge.Pt + 0.01, "Ge(Pt)");
+    text(DataFerr.Pt, CalcData.Ge.Pt, "Ge(Pt)");
     hold on
 
     plot(DataFerr.Al, CalcData.GaAs.Al, '.');
-    text(DataFerr.Al - 0.01, CalcData.GaAs.Al + 0.01, "GaAs(Al)");
+    text(DataFerr.Al, CalcData.GaAs.Al, "GaAs(Al)");
     hold on
     plot(DataFerr.Cu, CalcData.GaAs.Cu, '.');
-    text(DataFerr.Cu - 0.01, CalcData.GaAs.Cu - 0.01, "GaAs(Cu)");
+    text(DataFerr.Cu, CalcData.GaAs.Cu, "GaAs(Cu)");
     hold on
     plot(DataFerr.Au, CalcData.GaAs.Au, '.');
-    text(DataFerr.Au + 0.01, CalcData.GaAs.Au + 0.01, "GaAs(Au)");
+    text(DataFerr.Au, CalcData.GaAs.Au, "GaAs(Au)");
     hold on
     plot(DataFerr.Pt, CalcData.GaAs.Pt, '.');
-    text(DataFerr.Pt + 0.01, CalcData.GaAs.Pt - 0.01, "GaAs(Pt)");
+    text(DataFerr.Pt, CalcData.GaAs.Pt, "GaAs(Pt)");
     hold on
 
     plot(DataFerr.Al, CalcData.InSb.Al, '.');
-    text(DataFerr.Al + 0.01, CalcData.InSb.Al - 0.01, "InSb(Al)");
+    text(DataFerr.Al, CalcData.InSb.Al, "InSb(Al)");
     hold on
     plot(DataFerr.Cu, CalcData.InSb.Cu, '.');
-    text(DataFerr.Cu - 0.01, CalcData.InSb.Cu + 0.01, "InSb(Cu)");
+    text(DataFerr.Cu, CalcData.InSb.Cu, "InSb(Cu)");
     hold on
     plot(DataFerr.Au, CalcData.InSb.Au, '.');
-    text(DataFerr.Au - 0.01, CalcData.InSb.Au - 0.01, "InSb(Au)");
+    text(DataFerr.Au, CalcData.InSb.Au, "InSb(Au)");
     hold on
     plot(DataFerr.Pt, CalcData.InSb.Pt, '.');
-    text(DataFerr.Pt + 0.01, CalcData.InSb.Pt + 0.01, "InSb(Pt)");
+    text(DataFerr.Pt, CalcData.InSb.Pt, "InSb(Pt)");
 
     xlabel("Работа выхода из металла");
     ylabel("Контактная разность потенциалов");

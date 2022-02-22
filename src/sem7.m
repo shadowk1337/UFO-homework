@@ -113,3 +113,4 @@ function makePlot(DataFerr, CalcData)
     xlabel("Работа выхода из металла");
     ylabel("Контактная разность потенциалов");
 end
+
